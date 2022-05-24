@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head', {titulo : "P&S detalles desde cero" , cssSheet:"style"}) %> 
+
+  <body>
+   <%- include('./partials/navbar') %>
+
+    <!-- Page content -->
+    <div class="ps-content">
+
+      <!-- Menu Section -->
+      <div class="ps-row ps-padding-64" id="menu">
+        <div class="ps-col l6 ps-padding-large">
+          <h1 class="ps-center">
+           <%= plato.nombre %> </h1>
+          <br />
+          <h4><%= plato.descripcion %> </h4>
+          <p class="ps-text-grey">
+            <%= plato.detalle %> 
+            <br>
+            <br>
+            <%= plato.precio %> 
+          </p>
+        </div>
+
+        <div class="ps-col l6 ps-padding-large ps-img-menu">
+          <img
+            src="<%= plato.img %> "
+            class="ps-round ps-image ps-opacity-min"
+            alt="Menu"
+          />
+        </div>
+      </div>
+
+     
+    </div>
+  </body>
+  <%- include ('./partials/footer') %> 
+</html>
